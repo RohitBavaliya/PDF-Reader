@@ -1,0 +1,2 @@
+rootProject.name = "PdfApplication"
+include ':app'
