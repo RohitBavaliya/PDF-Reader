@@ -3,7 +3,7 @@ package com.example.pdfapplication;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-// Bavliyas Project
+
 import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
