@@ -12,7 +12,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -114,7 +113,7 @@ public class FileUploadFirebase extends AppCompatActivity {
                         reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                             @Override
                             public void onSuccess(Uri uri) {
-                                Model model = new Model(fileTitle.getText().toString(),uri.toString());
+                                Model model = new Model(0,fileTitle.getText().toString(),uri.toString(),0,0);
                                 databaseReference.child(databaseReference.push().getKey()).setValue(model);
                                 dialog.dismiss();
                                 Toast.makeText(FileUploadFirebase.this, "File Uploaded..", Toast.LENGTH_SHORT).show();
