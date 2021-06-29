@@ -1,7 +1,7 @@
 package com.example.pdfapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+// Fetch from Github
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
