@@ -6,14 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
+
 public class Myadapter extends FirebaseRecyclerAdapter<Model,ViewHolder>
 {
-
     public Myadapter(@NonNull  FirebaseRecyclerOptions<Model> options) {
         super(options);
     }
@@ -33,31 +32,27 @@ public class Myadapter extends FirebaseRecyclerAdapter<Model,ViewHolder>
                 intent.putExtra("fileurl",model.getFileurl());
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                holder.readtext.setText("1");
                 holder.fileImage.getContext().startActivity(intent);
             }
         });
 
-        holder.readImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
         holder.likeImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                holder.liketext.setText("1");
             }
         });
 
         holder.dislikeImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                holder.disliketext.setText("1");
             }
         });
     }
+
 
     @NonNull
 
@@ -66,4 +61,6 @@ public class Myadapter extends FirebaseRecyclerAdapter<Model,ViewHolder>
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_row_design,parent,false);
         return new ViewHolder(view);
     }
+
+
 }
