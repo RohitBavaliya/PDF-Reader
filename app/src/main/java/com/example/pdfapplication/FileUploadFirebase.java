@@ -28,6 +28,7 @@ import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 
+// File Upload Section Completed
 public class FileUploadFirebase extends AppCompatActivity {
     ImageView uploadImage, cancelImage, fileImage, browseImage;
     EditText fileTitle;
